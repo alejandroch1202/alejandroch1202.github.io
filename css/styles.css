@@ -1,0 +1,315 @@
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --main-font: 'Lato', serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* Globals */
+
+.container {
+    width: min(80%, 120rem);
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    font-family: var(--main-font);
+}
+
+h1, h2, h3, h4, p {
+    font-family: var(--main-font);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+
+h4 {
+    font-size: 2.8rem;
+}
+
+img {
+    width: 4rem;
+}
+
+/* Utilities */
+
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+/* Content */
+
+.video {
+    height: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.video video {
+    object-fit: cover;
+    position: fixed;
+}
+
+.overlay {
+    position: absolute;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5046393557422969) 0%, rgba(0, 0, 0, 0.700717787114846) 33%, rgba(0, 0, 0, 0.804359243697479) 66%, rgba(0, 0, 0, 1) 100%);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: min(100%, 150rem);
+    column-gap: 2rem;
+    padding: 4rem;
+}
+
+@media (min-width: 480px) {
+    .nav {
+        justify-content: flex-end;
+    }
+}
+
+.nav__link {
+    color: var(--white);
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+    transition: font-size 0.3s ease-in-out;
+
+}
+
+@media (min-width: 480px) {
+    .nav__link {
+        font-size: 2.5rem;
+    }
+}
+
+.nav__link:hover {
+    font-size: 2.6rem;
+}
+
+#a, #b, #c, #d, #e, #f, #g, #h, #i {
+    animation-name: motion;
+    position: relative;
+    animation-fill-mode: forwards;
+    animation-duration: .5s;
+    opacity: 0;
+}
+
+#a {
+    animation-delay: .2s;
+}
+
+#b {
+    animation-delay: .4s;
+}
+
+#c {
+    animation-delay: .6s;
+}
+
+#d {
+    animation-delay: .8s;
+}
+
+#e {
+    animation-delay: 1s;
+}
+
+#f {
+    animation-delay: 1.2s;
+}
+
+#g {
+    animation-delay: 1.4s;
+}
+
+#h {
+    animation-delay: 1.6s;
+}
+
+#i {
+    animation-delay: 1.8s;
+}
+
+@keyframes motion {
+    from {
+        top: 15px;
+    }
+
+    to {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+.main-contact, .overlay-content {
+    height: 75%;
+    color: var(--white);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rrss {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    column-gap: 3rem;
+    align-items: center;
+
+}
+
+.rrss img {
+    width: 4rem;
+
+}
+
+.rrss__link {
+    color: var(--white);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#msg {
+    visibility: hidden;
+    position: absolute;
+    width: 15rem;
+    background-color: rgb(87, 87, 87);
+    color: #fff;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-top: 6rem;
+    margin-left: -16rem;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+@media (min-width: 480px) {
+    #msg {
+        margin-top: 0.1rem;
+        margin-left: 2rem;
+    }
+}
+
+#gmail:hover {
+    cursor: pointer;
+}
+
+#gmail:hover+#msg {
+    visibility: visible;
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* About */
+
+.main {
+    width: 80%;
+    color: var(--white);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.main-content p {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+@media (min-width: 480px) {
+    .main-content h1 {
+        font-size: 4rem;
+    }
+
+    .main-content p {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .main-content h1 {
+        font-size: 5rem;
+    }
+
+    .main-content p {
+        font-size: 3rem;
+    }
+}
+
+/* Overlay */
+
+.overlay-content h1 {
+    font-size: 4.5rem;
+}
+
+.overlay-content p {
+    font-size: 2.5rem;
+}
+
+@media (min-width: 480px) {
+    .overlay-content h1 {
+        font-size: 6rem;
+    }
+
+    .overlay-content p {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .overlay-content h1 {
+        font-size: 8rem;
+    }
+
+    .overlay-content p {
+        font-size: 4rem;
+    }
+}
