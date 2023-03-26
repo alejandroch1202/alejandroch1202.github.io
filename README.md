@@ -1,5 +1,3 @@
-# Alejandro Chavez
-
 ## About
 
 I have 3 years of experience working as a Software Engineer. Last year focused on Web Development with JavaScript in both: Frontend with React.js and Next.js framework and Backend with Node.js and Express.js & DB with PostgreSQL and MySQL with Sequelize. 
